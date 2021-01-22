@@ -1,0 +1,21 @@
+{
+    "emails": [
+        "cursores@gmail.com",
+        "rustixir@hotmail.com.br",
+        "jav@alguma.com.br",
+        "hah44a@alguma.com.br",
+        "sedfjbnk4a@alguma.com.b6"
+    ],
+    "shopping_list": [
+        {
+            "name": "Teclado hyperX",
+            "amount": 1,
+            "price": 25000
+        },
+        {
+            "name": "Mouse hyperX",
+            "amount": 1,
+            "price": 25000
+        }
+    ]
+}
