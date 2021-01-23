@@ -12,12 +12,17 @@ defmodule Services.ShoppingCartServiceTest do
     ]
   end
 
-  test "Must return the amounts to be paid with unequal division", context do
-    assert [33, 33, 34] = ShoppingCartService.divide_billing_by_email(100, context[:emails])
+  test "Must return the amounts to be paid with unequal division" do
+    assert [33, 33, 34] = ShoppingCartService.divide_billing_by_email(100, 3)
   end
 
-  test "Must return the amounts to be paid with equal division", context do
-    assert [50, 50, 50] = ShoppingCartService.divide_billing_by_email(150, context[:emails])
+  test "Must return the amounts to be paid with a quite unequal division" do
+    assert [41, 41, 41, 41, 42, 42, 42, 42, 42, 42, 42, 42] =
+             ShoppingCartService.divide_billing_by_email(500, 12)
+  end
+
+  test "Must return the amounts to be paid with equal division" do
+    assert [50, 50, 50] = ShoppingCartService.divide_billing_by_email(150, 3)
   end
 
   test "Should return an empty billing list when it has no items" do
